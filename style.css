@@ -1,0 +1,1256 @@
+
+/* ==========================================
+   MUMAIZA'S PERSONAL PORTFOLIO
+   Sage Green | Botanical | Elegant
+========================================== */
+
+
+/* ---------- COLOUR PALETTE ---------- */
+
+:root {
+    --sage: #A8B9A4;
+    --sage-dark: #526653;
+    --sage-light: #DCE5D9;
+    --sage-pale: #EEF2EA;
+
+    --cream: #F8F7F1;
+    --white: #FFFFFF;
+
+    --text: #334336;
+    --muted: #758276;
+
+    --border: #DCE3D8;
+
+    --shadow: 0 12px 35px rgba(67, 87, 68, 0.10);
+}
+
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==========================================
+   NAVIGATION BAR
+========================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: rgba(248, 247, 241, 0.92);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(158, 175, 155, 0.25);
+}
+
+
+/* Portfolio Logo */
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--sage-dark);
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+
+/* Navigation Links */
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--sage-dark);
+}
+
+
+/* ==========================================
+   HERO / HOME SECTION
+========================================== */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 100px 10%;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            #D5E1D1,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #EEF2E9,
+            #DFE8DC,
+            #F8F7F1
+        );
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 650px;
+
+    position: relative;
+    z-index: 2;
+
+    animation: fadeUp 1s ease;
+}
+
+
+/* Small Intro Label */
+
+.eyebrow {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid var(--border);
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--sage-dark);
+}
+
+
+/* Main Hero Heading */
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 1.12;
+
+    margin: 25px 0;
+
+    color: #364B38;
+}
+
+
+/* Highlighted Word */
+
+.hero h1 span {
+    color: #829781;
+    font-style: italic;
+}
+
+
+/* Hero Paragraph */
+
+.hero-description {
+    max-width: 550px;
+
+    font-size: 16px;
+
+    color: #657467;
+
+    margin-bottom: 30px;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Main Button */
+
+.primary-button {
+    background: var(--sage-dark);
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(67, 87, 68, 0.12);
+}
+
+.primary-button:hover {
+    background: #354A37;
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 20px rgba(67, 87, 68, 0.20);
+}
+
+
+/* Secondary Button */
+
+.secondary-button {
+    border: 1px solid var(--sage-dark);
+    color: var(--sage-dark);
+}
+
+.secondary-button:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+
+/* ==========================================
+   HERO DECORATIVE CARD
+========================================== */
+
+.hero-decoration {
+    z-index: 2;
+    margin-left: 40px;
+}
+
+.hero-card {
+    width: 290px;
+
+    padding: 40px 35px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+
+    transform: rotate(3deg);
+
+    transition: 0.4s ease;
+}
+
+.hero-card:hover {
+    transform: rotate(0deg) translateY(-10px);
+}
+
+
+/* Decorative Botanical Branch */
+
+.card-flower {
+    font-size: 0;
+
+    display: block;
+
+    width: 85px;
+    height: 100px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 150'%3E%3Cpath d='M20 140 Q55 100 75 10' fill='none' stroke='%23526653' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='38' cy='111' rx='27' ry='12' transform='rotate(-38 38 111)' fill='%2398AE94'/%3E%3Cellipse cx='58' cy='82' rx='27' ry='12' transform='rotate(35 58 82)' fill='%23A8B9A4'/%3E%3Cellipse cx='48' cy='49' rx='24' ry='11' transform='rotate(-40 48 49)' fill='%23C1D0BC'/%3E%3Cellipse cx='76' cy='23' rx='21' ry='10' transform='rotate(35 76 23)' fill='%23899F85'/%3E%3C/svg%3E");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Card Small Heading */
+
+.small-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-top: 25px;
+}
+
+
+/* Card Heading */
+
+.hero-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+
+/* Card Description */
+
+.card-caption {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   BOTANICAL DECORATIONS
+========================================== */
+
+.leaf-decoration {
+    position: absolute;
+
+    opacity: 0.18;
+
+    font-size: 0;
+
+    width: 300px;
+    height: 400px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 300'%3E%3Cpath d='M25 280 Q90 170 145 20' fill='none' stroke='%23526653' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M60 210 Q10 200 5 150 Q55 155 60 210Z' fill='%2398AE94'/%3E%3Cpath d='M60 210 Q30 170 15 155' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M85 165 Q135 175 145 125 Q95 115 85 165Z' fill='%23A8B9A4'/%3E%3Cpath d='M85 165 Q120 140 140 130' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M105 115 Q50 105 45 55 Q100 65 105 115Z' fill='%23C1D0BC'/%3E%3Cpath d='M105 115 Q70 75 50 60' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M125 70 Q170 85 175 40 Q130 30 125 70Z' fill='%23899F85'/%3E%3Cpath d='M125 70 Q155 50 170 45' fill='none' stroke='%23526653' stroke-width='2'/%3E%3C/svg%3E");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    pointer-events: none;
+}
+
+.leaf-one {
+    right: -30px;
+    bottom: -50px;
+
+    transform: rotate(-35deg);
+}
+
+.leaf-two {
+    left: -80px;
+    top: 100px;
+
+    transform: rotate(45deg);
+}
+
+
+/* ==========================================
+   GENERAL SECTION DESIGN
+========================================== */
+
+.section {
+    padding: 100px 10%;
+}
+
+
+/* Alternate Section Background */
+
+.section-alt {
+    background: #E9EEE5;
+}
+
+
+/* Section Heading Container */
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+}
+
+
+/* Small Heading Label */
+
+.section-label {
+    display: inline-block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--sage-dark);
+
+    margin-bottom: 15px;
+}
+
+
+/* Main Section Heading */
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1.3;
+
+    color: #364B38;
+
+    margin-bottom: 15px;
+}
+
+
+/* Heading Highlight */
+
+.section-heading h2 span {
+    color: #829781;
+    font-style: italic;
+}
+
+
+/* Section Subtitle */
+
+.section-subtitle {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+
+/* About Cards */
+
+.about-card {
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 40px rgba(67, 87, 68, 0.14);
+}
+
+
+/* Card Number */
+
+.card-number {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: var(--sage-dark);
+
+    margin-bottom: 20px;
+}
+
+
+/* About Heading */
+
+.about-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    color: #364B38;
+    margin-bottom: 20px;
+}
+
+
+/* About Paragraph */
+
+.about-card p {
+    color: #6B796D;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+
+/* Highlight Card */
+
+.about-highlight {
+    background: #D4DFD1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Highlight Icon */
+
+.highlight-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* Highlight Heading */
+
+.about-highlight h3 {
+    font-size: 25px;
+}
+
+
+/* Highlight Quote */
+
+.about-highlight p {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-style: italic;
+}
+
+
+/* ==========================================
+   LEARNING SECTION
+========================================== */
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Learning Card */
+
+.learning-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    position: relative;
+
+    box-shadow: var(--shadow);
+
+    transition: 0.35s ease;
+}
+
+
+/* Pop-Up Hover Effect */
+
+.learning-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(67, 87, 68, 0.15);
+}
+
+
+/* Learning Icon */
+
+.learning-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #E9EEE5;
+
+    border-radius: 18px;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Card Number */
+
+.learning-card .card-number {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    opacity: 0.5;
+}
+
+
+/* Learning Heading */
+
+.learning-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+
+/* Learning Description */
+
+.learning-card p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+
+/* Learning Status */
+
+.status-tag {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #E6EEE2;
+
+    color: var(--sage-dark);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   PROJECT SECTION
+========================================== */
+
+.project-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+/* Project Card */
+
+.project-card {
+    padding: 45px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 25px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.35s ease;
+}
+
+
+/* Project Hover */
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(67, 87, 68, 0.15);
+}
+
+
+/* Project Botanical Decoration */
+
+.project-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -15px;
+    bottom: -40px;
+
+    width: 220px;
+    height: 260px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 300'%3E%3Cpath d='M25 280 Q90 170 145 20' fill='none' stroke='%23526653' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M60 210 Q10 200 5 150 Q55 155 60 210Z' fill='%2398AE94'/%3E%3Cpath d='M60 210 Q30 170 15 155' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M85 165 Q135 175 145 125 Q95 115 85 165Z' fill='%23A8B9A4'/%3E%3Cpath d='M85 165 Q120 140 140 130' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M105 115 Q50 105 45 55 Q100 65 105 115Z' fill='%23C1D0BC'/%3E%3Cpath d='M105 115 Q70 75 50 60' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M125 70 Q170 85 175 40 Q130 30 125 70Z' fill='%23899F85'/%3E%3Cpath d='M125 70 Q155 50 170 45' fill='none' stroke='%23526653' stroke-width='2'/%3E%3C/svg%3E");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+/* Project Top Row */
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+/* Project Icon */
+
+.project-icon {
+    font-size: 30px;
+    color: var(--sage-dark);
+}
+
+
+/* Project Status */
+
+.project-status {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #E6EEE2;
+
+    color: var(--sage-dark);
+}
+
+
+/* Project Heading */
+
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+/* Project Paragraph */
+
+.project-card p {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+
+/* Coming Soon Text */
+
+.project-coming {
+    color: var(--sage-dark) !important;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+/* Project Footer */
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--border);
+
+    padding-top: 20px;
+    margin-top: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--sage-dark);
+}
+
+
+/* ==========================================
+   ACHIEVEMENTS / JOURNEY SECTION
+========================================== */
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* Journey Card */
+
+.journey-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+
+    transition: all 0.35s ease;
+}
+
+
+/* Pop-Up Effect */
+
+.journey-card:hover {
+    transform: translateY(-9px) scale(1.01);
+
+    box-shadow: 0 20px 40px rgba(67, 87, 68, 0.15);
+}
+
+
+/* Journey Icon */
+
+.journey-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #E9EEE5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 28px;
+
+    margin-bottom: 22px;
+}
+
+
+/* Journey Category */
+
+.journey-category {
+    display: block;
+
+    color: var(--sage-dark);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Journey Heading */
+
+.journey-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #364B38;
+    margin-bottom: 15px;
+}
+
+
+/* Journey Description */
+
+.journey-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   INTERESTS SECTION
+========================================== */
+
+.interests-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* Interest Pills */
+
+.interest-pill {
+    padding: 15px 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    color: var(--sage-dark);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(67, 87, 68, 0.05);
+
+    transition: 0.3s ease;
+}
+
+
+/* Interest Hover */
+
+.interest-pill:hover {
+    background: var(--sage-dark);
+    color: white;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(67, 87, 68, 0.15);
+}
+
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact-section {
+    padding: 100px 10%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #DCE6D8,
+            #CBD8C7
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Contact Content */
+
+.contact-content {
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Contact Heading */
+
+.contact-content h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1.2;
+
+    color: #364B38;
+
+    margin: 20px 0;
+}
+
+
+/* Contact Highlight */
+
+.contact-content h2 span {
+    color: #829781;
+    font-style: italic;
+}
+
+
+/* Contact Paragraph */
+
+.contact-content p {
+    color: #627264;
+    font-size: 15px;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+
+/* Contact Botanical Decoration */
+
+.contact-decoration {
+    position: absolute;
+
+    right: 8%;
+    bottom: -70px;
+
+    font-size: 0;
+
+    width: 380px;
+    height: 500px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 300'%3E%3Cpath d='M25 280 Q90 170 145 20' fill='none' stroke='%23526653' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M60 210 Q10 200 5 150 Q55 155 60 210Z' fill='%2398AE94'/%3E%3Cpath d='M60 210 Q30 170 15 155' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M85 165 Q135 175 145 125 Q95 115 85 165Z' fill='%23A8B9A4'/%3E%3Cpath d='M85 165 Q120 140 140 130' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M105 115 Q50 105 45 55 Q100 65 105 115Z' fill='%23C1D0BC'/%3E%3Cpath d='M105 115 Q70 75 50 60' fill='none' stroke='%23526653' stroke-width='2'/%3E%3Cpath d='M125 70 Q170 85 175 40 Q130 30 125 70Z' fill='%23899F85'/%3E%3Cpath d='M125 70 Q155 50 170 45' fill='none' stroke='%23526653' stroke-width='2'/%3E%3C/svg%3E");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.25;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    padding: 25px 10%;
+
+    text-align: center;
+
+    background: #455A48;
+
+    color: #E9EEE5;
+
+    font-size: 12px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+
+/* Fade Up Animation */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Hero Animation */
+
+.hero-content {
+    animation: fadeUp 1s ease;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 80px 7%;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* Navigation */
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+        overflow-x: auto;
+        max-width: 80%;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 85px 7%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+
+    /* About */
+
+    .about-card {
+        padding: 28px;
+    }
+
+
+    /* Learning */
+
+    .learning-card {
+        padding: 28px;
+    }
+
+
+    /* Projects */
+
+    .project-card {
+        padding: 28px;
+    }
+
+    .project-card h3 {
+        font-size: 26px;
+    }
+
+    .project-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* Journey */
+
+    .journey-card {
+        padding: 28px;
+    }
+
+    .journey-card h3 {
+        font-size: 22px;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        padding: 70px 7%;
+    }
+
+    .contact-content h2 {
+        font-size: 42px;
+    }
+
+    .contact-decoration {
+        width: 200px;
+        height: 270px;
+
+        right: -20px;
+        bottom: -30px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 25px 7%;
+    }
+
+}
